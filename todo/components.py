@@ -3,10 +3,11 @@ from tetra import Component, public, Library
 import itertools
 from .models import ToDo
 from .movies import movies
-
+from django.contrib.auth.models import User
 
 default = Library()
 another = Library()
+user = Library()
 
 @default.register
 class ToDoList(Component):
@@ -81,6 +82,8 @@ class ToDoItem(Component):
     </div>
     """
 
+    
+
     script: javascript = """
     export default {
         lastTitleValue: "",
@@ -134,3 +137,100 @@ class reactive_search(Component):
         </ul>
     </div>
     """
+
+
+@user.register
+class CreateUser(Component):
+    username = public("")
+    password = public("")
+    email = public("")
+
+
+    @public.watch("username", "password", "email").debounce(200)
+    def save(self, value, old_value, attr):
+        user = User.objects.create_user(
+            self.username, self.email, self.password
+        )
+        user.save()
+
+    template: django_html = """
+    <div>
+    <form method=POST>
+    {% csrf_token %}
+        <div class="input-group mb-2">
+            <input type="text" x-model="username" class="form-control"
+                placeholder="Username...">
+            <input type="password" x-model="password" class="form-control"
+                placeholder="Password...">
+            <input type="email" x-model="email" class="form-control"
+                placeholder="Email...">
+            <button class="btn btn-primary" @click="save()">Create</button>
+        </div>
+    </form>
+    </div>
+    """
+
+
+@user.register
+class LoginUser(Component):
+    username = public("")
+    password = public("")
+
+    @public.watch("username", "password").debounce(200)
+    def save(self, value, old_value, attr):
+        user = User.objects.get(username=self.username)
+        if user.check_password(self.password):
+            self.request.session.set_expiry(0)
+            self.request.session.save()
+            self.request.session.modified = True
+            self.request.session.save()
+            self.request.session.set_expiry(0)
+            self.request.session.save()
+            self.request.session.modified = True
+            self.request.session.save()
+            self.request.session.set_expiry(0)
+            self.request.session.save()
+            self.request.session.modified = True
+            self.request.session.save()
+            self.request.session.set_expiry(0)
+            self.request.session.save()
+
+            #	#y	#y	#y
+
+    
+    template: django_html = """
+    <div>
+    <form method=POST>
+    {% csrf_token %}
+        <div class="input-group mb-2">
+            <input type="text" x-model="username" class="form-control"
+                placeholder="Username...">
+            <input type="password" x-model="password" class="form-control"
+                placeholder="Password...">
+            <button class="btn btn-primary" @click="save()">Login</button>
+        </div>
+    </form>
+    </div>
+    """
+
+
+@user.register
+class UserList(Component):
+    # @public.watch("users").throttle(200)
+    # def watch_users(self, value, old_value, attr):
+    #     self.users = User.objects.all()
+
+    def load(self):
+        self.users = User.objects.all()
+
+
+    template: django_html = """
+    <div>
+        <ul>
+            {% for user in users %}
+                <li>{{ user.username }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    """
+    

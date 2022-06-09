@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "todo/__tetracache__/user/todo_user.js": {
+      "bytes": 1602,
+      "imports": []
+    }
+  },
+  "outputs": {
+    "todo/static/todo/tetra/user/todo_user-5BEP7A6N.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 2725
+    },
+    "todo/static/todo/tetra/user/todo_user-5BEP7A6N.js": {
+      "imports": [],
+      "exports": [],
+      "entryPoint": "todo/__tetracache__/user/todo_user.js",
+      "inputs": {
+        "todo/__tetracache__/user/todo_user.js": {
+          "bytesInOutput": 962
+        }
+      },
+      "bytes": 1021
+    }
+  }
+}

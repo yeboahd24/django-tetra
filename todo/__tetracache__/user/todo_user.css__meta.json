@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "todo/__tetracache__/user/todo_user.css": {
+      "bytes": 0,
+      "imports": []
+    }
+  },
+  "outputs": {
+    "todo/static/todo/tetra/user/todo_user-6FH2OPOP.css.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 93
+    },
+    "todo/static/todo/tetra/user/todo_user-6FH2OPOP.css": {
+      "imports": [],
+      "entryPoint": "todo/__tetracache__/user/todo_user.css",
+      "inputs": {
+        "todo/__tetracache__/user/todo_user.css": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 51
+    }
+  }
+}

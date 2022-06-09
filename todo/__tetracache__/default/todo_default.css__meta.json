@@ -1,7 +1,7 @@
 {
   "inputs": {
     "todo/components.py__to_do_item.css": {
-      "bytes": 2775,
+      "bytes": 2841,
       "imports": []
     },
     "todo/__tetracache__/default/todo_default.css": {
@@ -15,13 +15,13 @@
     }
   },
   "outputs": {
-    "todo/static/todo/tetra/default/todo_default-BTSHU547.css.map": {
+    "todo/static/todo/tetra/default/todo_default-UM5XK544.css.map": {
       "imports": [],
       "exports": [],
       "inputs": {},
-      "bytes": 3024
+      "bytes": 3093
     },
-    "todo/static/todo/tetra/default/todo_default-BTSHU547.css": {
+    "todo/static/todo/tetra/default/todo_default-UM5XK544.css": {
       "imports": [],
       "entryPoint": "todo/__tetracache__/default/todo_default.css",
       "inputs": {
