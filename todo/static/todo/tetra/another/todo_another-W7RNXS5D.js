@@ -1,0 +1,2 @@
+(()=>{(()=>{let e={},t=[{name:"_refresh",endpoint:["/tetra/todo/another/reactive_search/_refresh"]},{name:"watch_query",watch:["query"],throttle:200,throttle_trailing:!0,throttle_leading:!1,endpoint:["/tetra/todo/another/reactive_search/watch_query"]}],r=["key","query"],a="todo__another__reactive_search";window.document.addEventListener("alpine:init",()=>{Tetra.makeAlpineComponent(a,e,t,r)})})();})();
+//# sourceMappingURL=todo_another-W7RNXS5D.js.map

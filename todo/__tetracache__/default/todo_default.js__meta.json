@@ -1,0 +1,39 @@
+{
+  "inputs": {
+    "todo/components.py__to_do_item.js": {
+      "bytes": 2681,
+      "imports": []
+    },
+    "todo/__tetracache__/default/todo_default.js": {
+      "bytes": 1240,
+      "imports": [
+        {
+          "path": "todo/components.py__to_do_item.js",
+          "kind": "import-statement"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "todo/static/todo/tetra/default/todo_default-EFLVWHSD.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 5069
+    },
+    "todo/static/todo/tetra/default/todo_default-EFLVWHSD.js": {
+      "imports": [],
+      "exports": [],
+      "entryPoint": "todo/__tetracache__/default/todo_default.js",
+      "inputs": {
+        "todo/components.py__to_do_item.js": {
+          "bytesInOutput": 155
+        },
+        "todo/__tetracache__/default/todo_default.js": {
+          "bytesInOutput": 737
+        }
+      },
+      "bytes": 954
+    }
+  }
+}

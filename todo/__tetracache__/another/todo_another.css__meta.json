@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "todo/__tetracache__/another/todo_another.css": {
+      "bytes": 0,
+      "imports": []
+    }
+  },
+  "outputs": {
+    "todo/static/todo/tetra/another/todo_another-GWJNKNNU.css.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 93
+    },
+    "todo/static/todo/tetra/another/todo_another-GWJNKNNU.css": {
+      "imports": [],
+      "entryPoint": "todo/__tetracache__/another/todo_another.css",
+      "inputs": {
+        "todo/__tetracache__/another/todo_another.css": {
+          "bytesInOutput": 0
+        }
+      },
+      "bytes": 54
+    }
+  }
+}
