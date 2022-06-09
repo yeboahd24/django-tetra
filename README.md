@@ -1,2 +1,2 @@
 # django-tetra
-<img src="tetra"/>
+<img src="tetra.png"/>
