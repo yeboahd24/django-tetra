@@ -42,13 +42,22 @@
     <body>
         <div class="container">
             <h2>ToDo List with Tetra</h2>
-            {% @ todo.default.to_do_list / %}
+            {% @ todo.default.to_do_list  %}
+                something
+            {% /@ todo.default.to_do_list  %}
 
             <h2>Reactive search with Tetra</h2>
+
             {% @ todo.another.reactive_search / %}
+            <h2>Reactive user creation with Tetra</h2>
+            {% @ todo.user.create_user / %}
+
+            <h2>Reactive user list with Tetra</h2>
+            {% @ todo.user.user_list / %}
+
+           
         <hr><br><br>            
         </div>
-       
 
     </body>
 </html>
